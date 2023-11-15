@@ -43,12 +43,6 @@ namespace Assessment123
                 }
             }
 
-
-
-
-            //Understand how to read textfile and convert it to data source
-
-            //How to convert/or can it directly work with the table 
         }
 
         protected void btnDBUpload_Click(object sender, EventArgs e)
@@ -62,6 +56,19 @@ namespace Assessment123
             }
             
 
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            FileUpload.Dispose();
+            TxtTable.DataSource = null;
+            TxtTable.DataBind();
+        }
+
+        protected void btnDBClear_Click(object sender, EventArgs e)
+        {
+            MinMaxEmployeeGrid.DataSource = null;
+            MinMaxEmployeeGrid.DataBind();
         }
     }
 }

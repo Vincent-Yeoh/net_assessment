@@ -33,6 +33,15 @@ namespace Assessment123
         protected global::System.Web.UI.WebControls.Button btnUpload;
 
         /// <summary>
+        /// btnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear;
+
+        /// <summary>
         /// TxtTable control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace Assessment123
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDBUpload;
+
+        /// <summary>
+        /// btnDBClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDBClear;
 
         /// <summary>
         /// EmployeeProfiles control.
@@ -78,15 +96,6 @@ namespace Assessment123
         protected global::System.Web.UI.WebControls.GridView MinMaxEmployeeGrid;
 
         /// <summary>
-        /// DepartmentDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DepartmentDataSource;
-
-        /// <summary>
         /// EmployeeDataSource control.
         /// </summary>
         /// <remarks>
@@ -96,12 +105,12 @@ namespace Assessment123
         protected global::System.Web.UI.WebControls.SqlDataSource EmployeeDataSource;
 
         /// <summary>
-        /// QueryDataSource control.
+        /// DepartmentDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource QueryDataSource;
+        protected global::System.Web.UI.WebControls.SqlDataSource DepartmentDataSource;
     }
 }
