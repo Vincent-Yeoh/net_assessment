@@ -67,8 +67,9 @@
     <asp:GridView class="table table-bordered table-condensed table-responsive table-hover" runat="server" ID="MinMaxEmployeeGrid" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-        <asp:BoundField DataField="Id" HeaderText="Id" />
+
         <asp:BoundField DataField="Name" HeaderText="Employee Name" />
+                    <asp:BoundField DataField="Designation" HeaderText="Designation" />
         <asp:BoundField DataField="Age" HeaderText="Age" />
 
         </Columns>
@@ -89,20 +90,7 @@
 
     <asp:SqlDataSource ID="EmployeeDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Employee]"></asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="DepartmentDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Department] WHERE [Eid] = @original_Eid AND [Designation] = @original_Designation" InsertCommand="INSERT INTO [Department] ([Eid], [Designation]) VALUES (@Eid, @Designation)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Department]" UpdateCommand="UPDATE [Department] SET [Designation] = @Designation WHERE [Eid] = @original_Eid AND [Designation] = @original_Designation">
-        <DeleteParameters>
-            <asp:Parameter Name="original_Eid" Type="Int32" />
-            <asp:Parameter Name="original_Designation" Type="String" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="Eid" Type="Int32" />
-            <asp:Parameter Name="Designation" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="Designation" Type="String" />
-            <asp:Parameter Name="original_Eid" Type="Int32" />
-            <asp:Parameter Name="original_Designation" Type="String" />
-        </UpdateParameters>
+    <asp:SqlDataSource ID="DepartmentDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Department]">
     </asp:SqlDataSource>
 
 </asp:Content>

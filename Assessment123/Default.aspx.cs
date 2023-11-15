@@ -50,8 +50,18 @@ namespace Assessment123
             using(var context = new EmployeeDbEntities())
             {
                 var Employees = context.Employees;
-                List<Employee> queries = Employees.Where(x => x.Age == Employees.Max(p => p.Age) || x.Age == Employees.Min(p => p.Age)).ToList();
-                MinMaxEmployeeGrid.DataSource = queries;
+                var Departments = context.Departments;
+                var joinQueries = from Emp in Employees
+                                  join Depart in Departments on Emp.Id equals Depart.Eid
+                                  select new
+                                  {
+                                      Name = Emp.Name,
+                                      Designation = Depart.Designation,
+                                      Age = Emp.Age,
+                                  };
+                var i = joinQueries.Where(x => x.Age == joinQueries.Max(p => p.Age) || x.Age == joinQueries.Min(p => p.Age)).ToList();
+
+                MinMaxEmployeeGrid.DataSource = i;
                 MinMaxEmployeeGrid.DataBind();
             }
             
