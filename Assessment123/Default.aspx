@@ -6,17 +6,13 @@
     <asp:Button ID="btnUpload" runat="server" text="Confirm" OnClick="btnUpload_Click" />
 
     <asp:GridView runat="server" ID="TxtTable"/>
-    b.
-    <asp:GridView runat="server" ID="EmployeeProfiles" DataSourceID="EmployeeDataSource" />
+    b.<br />
+    <asp:Button ID="btnDBUpload" runat="server" Text="Upload Db" OnClick="btnDBUpload_Click" />
+&nbsp;<asp:GridView runat="server" ID="EmployeeProfiles" DataSourceID="EmployeeDataSource" />
     <br />
     <asp:GridView runat="server" ID="DepartmentProfiles" DataSourceID="DepartmentDataSource" />
     <br />
-    <asp:GridView runat="server" ID="GridView1" DataSourceID="QueryDataSource" AutoGenerateColumns="False" >
-        <Columns>
-            <asp:BoundField DataField="Name" HeaderText="Employee Name" ReadOnly="True" SortExpression="Name" />
-            <asp:BoundField DataField="Designation" HeaderText="Designation" ReadOnly="True" SortExpression="Designation" />
-            <asp:BoundField DataField="Age" HeaderText="Age" ReadOnly="True" SortExpression="Age" />
-        </Columns>
+    <asp:GridView runat="server" ID="MinMaxEmployeeGrid" >
     </asp:GridView>
 
     <asp:SqlDataSource ID="DepartmentDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Department]"></asp:SqlDataSource>

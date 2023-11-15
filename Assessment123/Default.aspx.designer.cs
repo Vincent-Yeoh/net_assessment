@@ -42,6 +42,15 @@ namespace Assessment123
         protected global::System.Web.UI.WebControls.GridView TxtTable;
 
         /// <summary>
+        /// btnDBUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDBUpload;
+
+        /// <summary>
         /// EmployeeProfiles control.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace Assessment123
         protected global::System.Web.UI.WebControls.GridView DepartmentProfiles;
 
         /// <summary>
-        /// GridView1 control.
+        /// MinMaxEmployeeGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView MinMaxEmployeeGrid;
 
         /// <summary>
         /// DepartmentDataSource control.

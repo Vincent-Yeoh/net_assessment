@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -18,7 +19,6 @@ namespace Assessment123
         protected void btnUpload_Click(object sender, EventArgs e)
         {
 
-   
             if (FileUpload.HasFile)
             {
                 try
@@ -49,6 +49,19 @@ namespace Assessment123
             //Understand how to read textfile and convert it to data source
 
             //How to convert/or can it directly work with the table 
+        }
+
+        protected void btnDBUpload_Click(object sender, EventArgs e)
+        {
+            using(var context = new EmployeeDbEntities())
+            {
+                var Employees = context.Employees;
+                List<Employee> queries = Employees.Where(x => x.Age == Employees.Max(p => p.Age) || x.Age == Employees.Min(p => p.Age)).ToList();
+                MinMaxEmployeeGrid.DataSource = queries;
+                MinMaxEmployeeGrid.DataBind();
+            }
+            
+
         }
     }
 }
